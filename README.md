@@ -4,6 +4,10 @@ Plataforma imobiliária completa da **Toninho Imóveis**: site público para anu
 
 Tudo fica salvo em banco de dados real (Supabase/PostgreSQL). Nenhuma informação importante depende do navegador.
 
+> 🎬 **Demonstração para apresentação:** https://theuzxl13-oss.github.io/imobiliaria/
+> Versão visual e clicável do site e do painel, com imóveis fictícios e sem banco de dados (nada é salvo).
+> O arquivo fica em `docs/index.html` e é publicado pelo GitHub Pages.
+
 ---
 
 ## Sumário
