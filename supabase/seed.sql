@@ -30,10 +30,10 @@ on conflict (name) do nothing;
 -- Configurações -------------------------------------------------------
 update public.site_settings set
   company_name   = 'Toninho Imóveis',
-  phone          = '(00) 0000-0000',
-  whatsapp       = '5500000000000',
+  phone          = '(11) 94726-8441',
+  whatsapp       = '5511947268441',
   email          = 'contato@toninhoimoveis.com.br',
-  address        = 'Rua Exemplo, 100 — Centro, Cidade Modelo/SP',
+  address        = 'R. Independência, 155 — Centro, Embu-Guaçu/SP — CEP 06900-140',
   instagram      = '',
   facebook       = '',
   business_hours = 'Segunda a sexta, das 8h às 18h · Sábado, das 8h às 12h',
