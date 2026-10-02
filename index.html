@@ -6,8 +6,8 @@
 <meta name="description" content="Demonstração interativa do site e do painel administrativo da Toninho Imóveis.">
 <meta property="og:title" content="Toninho Imóveis — Demonstração">
 <meta property="og:description" content="Encontre o imóvel ideal para você. Demonstração interativa do site e do painel administrativo.">
-<meta name="theme-color" content="#0b2140">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2140'/%3E%3Cpath d='M12 31 32 14l20 17' fill='none' stroke='%23dfa935' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 30h20M32 30v20' fill='none' stroke='%23fff' stroke-width='5.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0908'/%3E%3Cpath d='M12 31 32 14l20 17' fill='none' stroke='%23f97316' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 30h20M32 30v20' fill='none' stroke='%23fff' stroke-width='5.5' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>[hidden]{display:none!important}img{max-width:100%}</style>
 <title>Toninho Imóveis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +16,13 @@
 <style>
 /* Layout: protótipo navegável do site público + painel, com a identidade do projeto (azul-marinho + dourado). Tema único claro, cores explícitas. */
 :root{
-  --navy-950:#07152b; --navy-900:#0b2140; --navy-800:#112e55; --navy-700:#173c6d; --navy-500:#2f62a5; --navy-100:#d7e4f4; --navy-50:#eef4fb;
-  --gold-600:#a96d18; --gold-500:#c98d1f; --gold-400:#dfa935; --gold-300:#e9bf57; --gold-100:#f9ecc9; --gold-50:#fdf8ec;
-  --ink:#0f1b2d; --muted:#5b6678; --soft:#8a94a6; --line:#e3e8ef; --bg:#f7f8fb; --card:#ffffff;
-  --rose:#e11d48; --rose-50:#fff1f2; --green:#25d366; --green-dark:#1da851; --emerald:#047857; --emerald-50:#ecfdf5; --amber-50:#fffbeb; --amber:#b45309; --sky-50:#f0f9ff; --sky:#0369a1; --violet-50:#f5f3ff; --violet:#6d28d9; --slate-100:#f1f5f9;
+  --navy-950:#0a0908; --navy-900:#141210; --navy-800:#1c1917; --navy-700:#292524; --navy-500:#57534e; --navy-100:#e7e5e4; --navy-50:#f6f5f4;
+  --gold-600:#c2410c; --gold-500:#ea580c; --gold-400:#f97316; --gold-300:#fdba74; --gold-100:#ffedd5; --gold-50:#fff7ed;
+  --ink:#171412; --muted:#625b55; --soft:#8f8781; --line:#e7e4e1; --bg:#f7f6f5; --card:#ffffff;
+  --rose:#e11d48; --rose-50:#fff1f2; --green:#25d366; --green-dark:#1da851; --emerald:#047857; --emerald-50:#ecfdf5; --amber-50:#fffbeb; --amber:#b45309; --sky-50:#f0f9ff; --sky:#0369a1; --violet-50:#f5f3ff; --violet:#6d28d9; --slate-100:#f3f2f1;
   --font:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --shadow:0 1px 2px rgb(11 33 64/.04),0 8px 24px -8px rgb(11 33 64/.14);
-  --shadow-h:0 2px 4px rgb(11 33 64/.06),0 20px 40px -12px rgb(11 33 64/.26);
+  --shadow:0 1px 2px rgb(10 9 8/.04),0 8px 24px -8px rgb(10 9 8/.14);
+  --shadow-h:0 2px 4px rgb(10 9 8/.06),0 20px 40px -12px rgb(10 9 8/.26);
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -39,28 +39,28 @@ p{margin:0}
 .btn-sm{padding:7px 12px;font-size:12px;border-radius:9px}
 .btn-navy{background:var(--navy-800);color:#fff}.btn-navy:hover{background:var(--navy-700)}
 .btn-gold{background:var(--gold-400);color:var(--navy-950)}.btn-gold:hover{background:var(--gold-300)}
-.btn-out{background:#fff;border:1px solid #cfd6e0;color:var(--ink)}.btn-out:hover{background:var(--navy-50);border-color:var(--navy-100)}
+.btn-out{background:#fff;border:1px solid #d6d3d1;color:var(--ink)}.btn-out:hover{background:var(--navy-50);border-color:var(--navy-100)}
 .btn-wa{background:var(--green);color:#fff}.btn-wa:hover{background:var(--green-dark)}
 .btn-ghost{background:transparent;color:var(--muted)}.btn-ghost:hover{background:var(--slate-100)}
-.field{width:100%;border:1px solid #cfd6e0;border-radius:12px;padding:10px 12px;background:#fff;font-size:14px}
-.field:focus{outline:none;border-color:var(--navy-500);box-shadow:0 0 0 4px rgb(47 98 165/.15)}
-label.lb{display:block;font-size:13px;font-weight:600;color:#334155;margin-bottom:5px}
+.field{width:100%;border:1px solid #d6d3d1;border-radius:12px;padding:10px 12px;background:#fff;font-size:14px}
+.field:focus{outline:none;border-color:var(--navy-500);box-shadow:0 0 0 4px rgb(249 115 22/.18)}
+label.lb{display:block;font-size:13px;font-weight:600;color:#44403c;margin-bottom:5px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
 .eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-600)}
 .h2{font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--navy-950);margin-top:6px}
 .tag{display:inline-flex;align-items:center;border-radius:6px;padding:3px 8px;font-size:10.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
-.tag-navy{background:rgb(11 33 64/.9);color:#fff}.tag-rose{background:var(--rose);color:#fff}.tag-gold{background:var(--gold-400);color:var(--navy-950)}.tag-dark{background:#0f172a;color:#fff}
+.tag-navy{background:rgb(10 9 8/.9);color:#fff}.tag-rose{background:var(--rose);color:#fff}.tag-gold{background:var(--gold-400);color:var(--navy-950)}.tag-dark{background:#0a0908;color:#fff}
 .pill{display:inline-flex;align-items:center;border-radius:99px;padding:2px 9px;font-size:11.5px;font-weight:700;white-space:nowrap}
-.st-disponivel{background:var(--emerald-50);color:var(--emerald)}.st-reservado{background:var(--amber-50);color:var(--amber)}.st-vendido{background:var(--sky-50);color:var(--sky)}.st-alugado{background:var(--violet-50);color:var(--violet)}.st-indisponivel{background:var(--slate-100);color:#475569}
+.st-disponivel{background:var(--emerald-50);color:var(--emerald)}.st-reservado{background:var(--amber-50);color:var(--amber)}.st-vendido{background:var(--sky-50);color:var(--sky)}.st-alugado{background:var(--violet-50);color:var(--violet)}.st-indisponivel{background:var(--slate-100);color:#57534e}
 .ld-novo{background:var(--rose-50);color:var(--rose)}.ld-em_atendimento{background:var(--amber-50);color:var(--amber)}.ld-contato_realizado{background:var(--sky-50);color:var(--sky)}.ld-visita_agendada{background:var(--violet-50);color:var(--violet)}.ld-finalizado{background:var(--emerald-50);color:var(--emerald)}
 .num{font-variant-numeric:tabular-nums}
 svg.ic{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* barra da demonstração */
-.demobar{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:var(--navy-950);color:#cbd5e1;font-size:12.5px}
+.demobar{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:var(--navy-950);color:#d6d3d1;font-size:12.5px}
 .demobar .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:7px;flex-wrap:wrap}
 .seg{display:inline-flex;background:rgb(255 255 255/.08);border-radius:10px;padding:3px}
-.seg button{border:0;background:transparent;color:#cbd5e1;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:8px}
+.seg button{border:0;background:transparent;color:#d6d3d1;font-weight:700;font-size:12.5px;padding:5px 12px;border-radius:8px}
 .seg button[aria-pressed=true]{background:var(--gold-400);color:var(--navy-950)}
 
 /* site */
@@ -71,33 +71,33 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .logo i{display:block;font-style:normal;font-size:10px;font-weight:800;letter-spacing:.32em;color:var(--gold-600);margin-top:3px}
 .logo.light b{color:#fff}.logo.light i{color:var(--gold-300)}
 nav.main{display:flex;gap:2px}
-nav.main button{border:0;background:none;padding:8px 11px;border-radius:9px;font-weight:700;font-size:14px;color:#475569}
-nav.main button:hover{background:#f8fafc;color:var(--navy-800)}
+nav.main button{border:0;background:none;padding:8px 11px;border-radius:9px;font-weight:700;font-size:14px;color:#57534e}
+nav.main button:hover{background:#f8f7f6;color:var(--navy-800)}
 nav.main button[aria-current=page]{background:var(--navy-50);color:var(--navy-800)}
 .menu-btn{display:none}
 @media (max-width:1060px){nav.main{display:none}.menu-btn{display:inline-flex}.hide-md{display:none!important}}
 @media (max-width:560px){.hide-sm{display:none!important}}
 .mnav{display:grid;gap:4px;padding:10px 0 16px}
-.mnav button{border:0;background:none;text-align:left;padding:11px 12px;border-radius:10px;font-weight:700;color:#334155}
+.mnav button{border:0;background:none;text-align:left;padding:11px 12px;border-radius:10px;font-weight:700;color:#44403c}
 .mnav button[aria-current=page]{background:var(--navy-50);color:var(--navy-800)}
 
-.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 18% 20%,rgb(223 169 53/.22),transparent 40%),radial-gradient(circle at 85% 0%,rgb(79 127 191/.45),transparent 45%),linear-gradient(135deg,var(--navy-950),var(--navy-800) 55%,var(--navy-700))}
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 18% 20%,rgb(249 115 22/.24),transparent 40%),radial-gradient(circle at 85% 0%,rgb(249 115 22/.10),transparent 45%),linear-gradient(135deg,var(--navy-950),var(--navy-800) 55%,var(--navy-700))}
 .hero .skyline{position:absolute;inset:auto 0 0 0;height:46%;opacity:.16;pointer-events:none}
 .hero .wrap{position:relative;padding-block:64px 52px}
 .hero h1{font-size:clamp(34px,5.6vw,60px);font-weight:800;line-height:1.05;max-width:760px}
 .hero h1 em{font-style:normal;color:var(--gold-300)}
-.hero .lead{margin-top:14px;max-width:560px;color:#d5dde9;font-size:17px}
+.hero .lead{margin-top:14px;max-width:560px;color:#e7e5e4;font-size:17px}
 .chip{display:inline-flex;align-items:center;gap:7px;border:1px solid rgb(255 255 255/.16);background:rgb(255 255 255/.08);border-radius:99px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--gold-100)}
-.search{margin-top:30px;max-width:1000px;background:#fff;color:var(--ink);border-radius:18px;padding:10px;box-shadow:0 25px 60px -15px rgb(7 21 43/.55)}
+.search{margin-top:30px;max-width:1000px;background:#fff;color:var(--ink);border-radius:18px;padding:10px;box-shadow:0 25px 60px -15px rgb(10 9 8/.55)}
 .tabs{display:flex;gap:4px;padding:3px}
-.tabs button{border:0;background:none;border-radius:9px;padding:7px 18px;font-weight:800;font-size:14px;color:#475569}
+.tabs button{border:0;background:none;border-radius:9px;padding:7px 18px;font-weight:800;font-size:14px;color:#57534e}
 .tabs button[aria-pressed=true]{background:var(--navy-800);color:#fff}
 .sgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:8px;margin-top:8px}
 @media (max-width:860px){.sgrid{grid-template-columns:1fr}}
 .sbox{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:0 12px;color:var(--gold-500)}
 .sbox input,.sbox select{border:0;outline:0;background:transparent;width:100%;padding:13px 0;font-size:14px;color:var(--ink)}
 .trust{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:28px;font-size:14px}
-.trust span{display:flex;align-items:center;gap:7px;color:#cbd5e1}.trust b{color:#fff}
+.trust span{display:flex;align-items:center;gap:7px;color:#d6d3d1}.trust b{color:#fff}
 
 section.blk{padding-block:56px}
 section.white{background:#fff}
@@ -112,13 +112,13 @@ section.white{background:#fff}
 .pcard .ph svg.photo{width:100%;height:100%;display:block;transition:transform .5s}
 .pcard:hover .ph svg.photo{transform:scale(1.05)}
 .pcard .tags{position:absolute;top:10px;left:10px;display:flex;flex-wrap:wrap;gap:5px}
-.pcard .code{position:absolute;right:10px;bottom:10px;background:rgb(255 255 255/.92);border-radius:6px;padding:2px 7px;font-size:11px;font-weight:800;color:#334155}
+.pcard .code{position:absolute;right:10px;bottom:10px;background:rgb(255 255 255/.92);border-radius:6px;padding:2px 7px;font-size:11px;font-weight:800;color:#44403c}
 .pcard .stat{position:absolute;left:10px;bottom:10px}
 .pcard .bd{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
 .pcard .cat{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-600)}
 .pcard h3{font-size:15.5px;font-weight:800;color:var(--navy-950);margin-top:4px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .pcard .loc{display:flex;gap:4px;align-items:center;color:var(--soft);font-size:13px;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;border-block:1px solid #eef1f5;margin-top:14px;padding-block:10px;font-size:12px;color:#475569;text-align:center}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;border-block:1px solid #efedeb;margin-top:14px;padding-block:10px;font-size:12px;color:#57534e;text-align:center}
 .facts span{display:flex;flex-direction:column;align-items:center;gap:3px}.facts svg{color:var(--navy-500);width:16px;height:16px}
 .pcard .ft{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:14px;flex:1}
 .price{font-size:19px;font-weight:800;color:var(--navy-900)}
@@ -128,42 +128,42 @@ section.white{background:#fff}
 .pcard:hover .ver{background:var(--navy-800);color:#fff}
 
 .cats{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
-.catb{display:flex;flex-direction:column;align-items:flex-start;gap:12px;border:1px solid var(--line);background:#fafbfd;border-radius:16px;padding:18px;text-align:left;transition:.2s}
+.catb{display:flex;flex-direction:column;align-items:flex-start;gap:12px;border:1px solid var(--line);background:#faf9f8;border-radius:16px;padding:18px;text-align:left;transition:.2s}
 .catb:hover{background:#fff;box-shadow:var(--shadow);transform:translateY(-2px)}
 .catb .ico{background:var(--navy-800);color:var(--gold-300);border-radius:12px;padding:10px;display:flex}
 .catb b{display:block;color:var(--navy-950)}.catb small{color:var(--soft);font-size:12px}
 
 .cta{position:relative;overflow:hidden;border-radius:26px;background:var(--navy-900);color:#fff;padding:44px clamp(22px,4vw,52px);display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:center}
-.cta::before{content:"";position:absolute;width:300px;height:300px;right:-90px;top:-110px;border-radius:50%;background:rgb(223 169 53/.22);filter:blur(50px)}
+.cta::before{content:"";position:absolute;width:300px;height:300px;right:-90px;top:-110px;border-radius:50%;background:rgb(249 115 22/.24);filter:blur(50px)}
 @media (max-width:820px){.cta{grid-template-columns:1fr}}
 .cta h2{font-size:clamp(24px,3.2vw,36px);font-weight:800;margin-top:6px}
-.cta p{color:#cbd5e1;margin-top:10px;max-width:540px}
+.cta p{color:#d6d3d1;margin-top:10px;max-width:540px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
 @media (max-width:860px){.two{grid-template-columns:1fr}}
 .vals{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .vals div{border:1px solid var(--line);border-radius:16px;padding:18px}
 .vals b{display:block;margin-top:10px;color:var(--navy-950)}.vals small{color:var(--muted);font-size:13px}
 .vals svg{color:var(--gold-500);width:26px;height:26px}
-footer.site{background:var(--navy-950);color:#94a3b8;margin-top:0}
+footer.site{background:var(--navy-950);color:#a8a29e;margin-top:0}
 footer.site .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding-block:52px}
 @media (max-width:860px){footer.site .cols{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){footer.site .cols{grid-template-columns:1fr}}
 footer.site h4{color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 14px}
 footer.site li{list-style:none;margin:8px 0;font-size:14px}
 footer.site ul{padding:0;margin:0}
-footer.site button{border:0;background:none;color:#94a3b8;padding:0}
+footer.site button{border:0;background:none;color:#a8a29e;padding:0}
 footer.site button:hover{color:var(--gold-300)}
-.fbar{border-top:1px solid rgb(255 255 255/.08);font-size:12px;color:#64748b}
+.fbar{border-top:1px solid rgb(255 255 255/.08);font-size:12px;color:#78716c}
 .fbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;padding-block:16px}
 .wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;border:0;background:var(--green);color:#fff;border-radius:50%;padding:14px;box-shadow:0 10px 25px -6px rgb(0 0 0/.35);display:flex}
 .wa-float:hover{background:var(--green-dark);transform:scale(1.05)}
 
 /* listagem */
-.phero{background:radial-gradient(circle at 80% 0%,rgb(79 127 191/.4),transparent 45%),linear-gradient(135deg,var(--navy-950),var(--navy-800));color:#fff}
+.phero{background:radial-gradient(circle at 80% 0%,rgb(249 115 22/.12),transparent 45%),linear-gradient(135deg,var(--navy-950),var(--navy-800));color:#fff}
 .phero .wrap{padding-block:38px}
-.crumb{font-size:12px;color:#cbd5e1;margin-bottom:8px}
+.crumb{font-size:12px;color:#d6d3d1;margin-bottom:8px}
 .phero h1{font-size:clamp(28px,4vw,40px);font-weight:800}
-.phero p{color:#cbd5e1;margin-top:6px}
+.phero p{color:#d6d3d1;margin-top:6px}
 .listing{display:grid;grid-template-columns:290px minmax(0,1fr);gap:24px;padding-block:30px 56px}
 @media (max-width:960px){.listing{grid-template-columns:1fr}}
 .filters{padding:20px;align-self:start;position:sticky;top:130px}
@@ -171,7 +171,7 @@ footer.site button:hover{color:var(--gold-300)}
 .filters h3{font-size:15px;font-weight:800;color:var(--navy-950);margin-bottom:14px;display:flex;gap:8px;align-items:center}
 .fgroup{margin-bottom:14px}
 .cnt{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
-.cnt button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 0;font-size:12px;font-weight:800;color:#475569}
+.cnt button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 0;font-size:12px;font-weight:800;color:#57534e}
 .cnt button[aria-pressed=true]{background:var(--navy-800);border-color:var(--navy-800);color:#fff}
 .lhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
 .empty{padding:50px 20px;text-align:center}
@@ -182,7 +182,7 @@ footer.site button:hover{color:var(--gold-300)}
 @media (max-width:980px){.pgrid{grid-template-columns:1fr}}
 .gal{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:var(--navy-900)}
 .gal svg.photo{width:100%;height:100%;display:block}
-.gal .nav{position:absolute;top:50%;transform:translateY(-50%);border:0;background:rgb(255 255 255/.92);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#1e293b;box-shadow:0 6px 16px rgb(0 0 0/.2)}
+.gal .nav{position:absolute;top:50%;transform:translateY(-50%);border:0;background:rgb(255 255 255/.92);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#292524;box-shadow:0 6px 16px rgb(0 0 0/.2)}
 .gal .info{position:absolute;right:12px;bottom:12px;display:flex;gap:6px}
 .gal .info span{background:rgb(0 0 0/.6);color:#fff;border-radius:8px;padding:5px 9px;font-size:12px;font-weight:700}
 .thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:4px}
@@ -193,12 +193,12 @@ footer.site button:hover{color:var(--gold-300)}
 .box h2{font-size:17px;font-weight:800;color:var(--navy-950);margin-bottom:14px}
 .dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media (max-width:560px){.dgrid{grid-template-columns:1fr 1fr}}
-.dgrid div{display:flex;gap:10px;align-items:center;background:#f8fafc;border-radius:12px;padding:10px}
+.dgrid div{display:flex;gap:10px;align-items:center;background:#f8f7f6;border-radius:12px;padding:10px}
 .dgrid .i{background:#fff;border-radius:9px;padding:7px;color:var(--navy-500);display:flex;box-shadow:0 1px 3px rgb(0 0 0/.06)}
 .dgrid small{display:block;font-size:11.5px;color:var(--soft)}.dgrid b{color:var(--navy-950)}
 .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 14px;padding:0;margin:0}
 @media (max-width:560px){.feat{grid-template-columns:1fr 1fr}}
-.feat li{list-style:none;display:flex;gap:8px;align-items:center;font-size:14px;color:#334155}
+.feat li{list-style:none;display:flex;gap:8px;align-items:center;font-size:14px;color:#44403c}
 .feat li span{background:var(--emerald-50);color:var(--emerald);border-radius:50%;display:flex;padding:3px}
 .side{display:grid;gap:16px;align-self:start}
 @media (max-width:980px){.side{position:static}}
@@ -206,7 +206,7 @@ footer.site button:hover{color:var(--gold-300)}
 .big.promo{color:var(--rose)}
 .save{display:inline-block;margin-top:6px;background:var(--rose-50);color:#be123c;border-radius:6px;padding:2px 8px;font-size:12px;font-weight:800}
 .share{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.share button{border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 4px;font-size:12px;font-weight:700;color:#334155;display:flex;align-items:center;justify-content:center;gap:5px}
+.share button{border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 4px;font-size:12px;font-weight:700;color:#44403c;display:flex;align-items:center;justify-content:center;gap:5px}
 
 /* overlays */
 .lightbox{position:fixed;inset:0;z-index:90;background:rgb(0 0 0/.94);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 10px) 10px calc(env(safe-area-inset-bottom,0px) + 10px)}
@@ -218,17 +218,17 @@ footer.site button:hover{color:var(--gold-300)}
 .toast{pointer-events:auto;max-width:420px;background:#fff;border:1px solid #bbf7d0;color:#065f46;border-radius:12px;padding:11px 14px;font-size:14px;font-weight:600;box-shadow:0 12px 30px -10px rgb(0 0 0/.25);display:flex;gap:9px;align-items:flex-start;animation:tin .25s ease}
 .toast.info{border-color:var(--navy-100);color:var(--navy-800)}
 @keyframes tin{from{transform:translateY(-8px);opacity:0}}
-.modal{position:fixed;inset:0;z-index:95;background:rgb(7 21 43/.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.modal{position:fixed;inset:0;z-index:95;background:rgb(10 9 8/.55);display:flex;align-items:center;justify-content:center;padding:16px}
 .modal .card{max-width:440px;width:100%;padding:22px}
 .wa-preview{background:#e7f8ee;border-radius:12px 12px 12px 3px;padding:12px 14px;color:#14532d;font-size:14px;margin-top:12px}
 
 /* painel */
 .adm{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:calc(100vh - 41px)}
 @media (max-width:900px){.adm{grid-template-columns:1fr}}
-.aside{background:var(--navy-950);color:#cbd5e1;padding:20px 12px;display:flex;flex-direction:column;gap:4px}
+.aside{background:var(--navy-950);color:#d6d3d1;padding:20px 12px;display:flex;flex-direction:column;gap:4px}
 @media (max-width:900px){.aside{flex-direction:row;overflow-x:auto;padding:10px 12px;gap:6px}.aside .logo,.aside .who{display:none}}
 .aside .logo{padding:0 10px 18px}
-.aside button.it{border:0;background:none;color:#cbd5e1;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:11px;font-weight:700;font-size:14px;text-align:left;white-space:nowrap}
+.aside button.it{border:0;background:none;color:#d6d3d1;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:11px;font-weight:700;font-size:14px;text-align:left;white-space:nowrap}
 .aside button.it:hover{background:rgb(255 255 255/.06);color:#fff}
 .aside button.it[aria-current=page]{background:rgb(255 255 255/.1);color:#fff}
 .aside button.it[aria-current=page] svg{color:var(--gold-300)}
@@ -245,20 +245,20 @@ footer.site button:hover{color:var(--gold-300)}
 .stats small{color:var(--muted);font-size:12.5px;font-weight:600}
 .tbl{width:100%;border-collapse:collapse;font-size:14px}
 .tbl th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);padding:12px 14px;border-bottom:1px solid var(--line)}
-.tbl td{padding:10px 14px;border-bottom:1px solid #f1f4f8;vertical-align:middle}
+.tbl td{padding:10px 14px;border-bottom:1px solid #f2f0ee;vertical-align:middle}
 .tbl tr:last-child td{border-bottom:0}
 .thumb{width:62px;height:46px;border-radius:9px;overflow:hidden;flex:none}
 .thumb svg{width:100%;height:100%;display:block}
 .scroll-x{overflow-x:auto}
 .menu{position:absolute;right:0;top:100%;margin-top:4px;z-index:30;width:230px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 40px -12px rgb(0 0 0/.25);padding:5px 0}
-.menu button{display:flex;width:100%;gap:9px;align-items:center;border:0;background:none;text-align:left;padding:8px 13px;font-size:13.5px;color:#334155}
-.menu button:hover{background:#f8fafc}
-.menu hr{border:0;border-top:1px solid #f1f4f8;margin:4px 0}
+.menu button{display:flex;width:100%;gap:9px;align-items:center;border:0;background:none;text-align:left;padding:8px 13px;font-size:13.5px;color:#44403c}
+.menu button:hover{background:#f8f7f6}
+.menu hr{border:0;border-top:1px solid #f2f0ee;margin:4px 0}
 .lead{padding:16px 18px}
 .login{min-height:calc(100vh - 41px);display:grid;grid-template-columns:1fr 1fr}
 @media (max-width:860px){.login{grid-template-columns:1fr}.login .art{display:none}}
 .login .art{padding:48px;display:flex;flex-direction:column;justify-content:space-between}
-.note{background:var(--gold-50);border:1px solid var(--gold-100);color:#7c4a0e;border-radius:12px;padding:10px 12px;font-size:13px}
+.note{background:var(--gold-50);border:1px solid var(--gold-100);color:#9a3412;border-radius:12px;padding:10px 12px;font-size:13px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 
@@ -320,7 +320,7 @@ const P={
 const ic=(n,s)=>`<svg class="ic" viewBox="0 0 24 24" ${s?`style="width:${s}px;height:${s}px"`:''} aria-hidden="true">${P[n]}</svg>`;
 const WA='<svg viewBox="0 0 24 24" width="ICON" height="ICON" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.71.22 1.36.19 1.88.12.57-.09 1.75-.72 2-1.4.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.2 4.23-9.42 9.44-9.42a9.4 9.4 0 0 1 9.42 9.43c0 5.2-4.23 9.42-9.43 9.42m8.02-17.44A11.27 11.27 0 0 0 12.04.75C5.8.75.71 5.83.71 12.08c0 2 .52 3.95 1.52 5.66L.62 23.62l6.02-1.58a11.3 11.3 0 0 0 5.4 1.38h.01c6.25 0 11.33-5.08 11.34-11.33 0-3.03-1.18-5.87-3.32-8.02"/></svg>';
 const wa=s=>WA.replaceAll('ICON',s);
-const mark=`<svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0b2140"/><path d="M12 31 32 14l20 17" fill="none" stroke="#dfa935" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 30h20M32 30v20" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round"/></svg>`;
+const mark=`<svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0a0908"/><path d="M12 31 32 14l20 17" fill="none" stroke="#f97316" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 30h20M32 30v20" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round"/></svg>`;
 const logo=(light)=>`<span class="logo${light?' light':''}">${mark}<span><b>TONINHO</b><i>IMÓVEIS</i></span></span>`;
 
 /* ---------------- "fotos" ilustradas (SVG) ---------------- */
@@ -337,7 +337,7 @@ function photo(kind,v=0){
     body=`${tree(110,.9)}${tree(705,1.05)}
     <rect x="210" y="235" width="380" height="170" fill="${wall}"/><path d="M185 245 400 125 615 245Z" fill="${roof}"/>
     <rect x="245" y="275" width="80" height="62" rx="4" fill="#9fc3e6" stroke="#fff" stroke-width="6"/><rect x="475" y="275" width="80" height="62" rx="4" fill="#9fc3e6" stroke="#fff" stroke-width="6"/>
-    <rect x="365" y="300" width="70" height="105" rx="4" fill="${roof}"/><circle cx="423" cy="355" r="4" fill="#dfa935"/>
+    <rect x="365" y="300" width="70" height="105" rx="4" fill="${roof}"/><circle cx="423" cy="355" r="4" fill="#f97316"/>
     ${kind==='condominio'?'<rect x="80" y="370" width="640" height="34" fill="#d9dee6"/><rect x="80" y="365" width="640" height="8" fill="#c5ccd6"/>':''}
     ${v%3===0?'<rect x="600" y="410" width="160" height="60" rx="8" fill="#5ab4e0"/><rect x="608" y="418" width="144" height="44" rx="6" fill="#7fd0f2"/>':''}`;
   }else if(kind==='apartamento'){
@@ -351,7 +351,7 @@ function photo(kind,v=0){
   }else if(kind==='terreno'){
     body=`<path d="M0 330 Q200 290 400 320 T800 300 V400 H0Z" fill="#a9cf86"/><path d="M180 400 L260 330 H560 L640 400Z" fill="#c9b27c" opacity=".55"/>
     ${[0,1,2,3,4].map(i=>`<rect x="${255+i*75}" y="322" width="6" height="40" fill="#8a6a45"/>`).join('')}<rect x="255" y="330" width="306" height="4" fill="#8a6a45"/>${tree(110,.8)}${tree(700,.9)}
-    <rect x="600" y="300" width="80" height="50" rx="4" fill="#fff"/><text x="640" y="331" font-size="18" font-weight="800" text-anchor="middle" fill="#0b2140" font-family="sans-serif">VENDE</text>`;
+    <rect x="600" y="300" width="80" height="50" rx="4" fill="#fff"/><text x="640" y="331" font-size="18" font-weight="800" text-anchor="middle" fill="#0a0908" font-family="sans-serif">VENDE</text>`;
   }else{ /* rural: chácara/sítio */
     body=`<path d="M0 320 Q220 250 430 300 T800 280 V400 H0Z" fill="#7fb466"/>${tree(90,1)}${tree(180,.8)}${tree(650,1.1)}${tree(735,.85)}
     <rect x="300" y="270" width="240" height="135" fill="#f3e7d3"/><path d="M280 280 420 200 560 280Z" fill="#9b4b2e"/><rect x="300" y="330" width="240" height="10" fill="#c9a06b"/>
@@ -464,7 +464,7 @@ function pageHome(){
   <section class="blk white"><div class="wrap two"><div><p class="eyebrow">Sobre nós</p><h2 class="h2">Conheça a Toninho Imóveis</h2><p style="color:var(--muted);margin-top:14px;max-width:560px">A Toninho Imóveis nasceu para tornar a compra, a venda e a locação de imóveis uma experiência simples, transparente e segura. Acompanhamos cada cliente do primeiro contato até a entrega das chaves.</p><button class="btn btn-out" data-go="sobre" style="margin-top:20px">Saiba mais sobre nós</button></div>
    <div class="vals">${[['shield','Segurança','Contratos e documentação conferidos com cuidado.'],['hand','Confiança','Relacionamento transparente do início ao fim.'],['check','Qualidade','Imóveis avaliados e anúncios completos.'],['key','Agilidade','Atendimento rápido para você não perder oportunidades.']].map(([i,t,d])=>`<div>${ic(i)}<b>${t}</b><small>${d}</small></div>`).join('')}</div></div></section>
   <section class="blk"><div class="wrap"><div class="card two" style="padding:clamp(22px,4vw,40px)"><div><p class="eyebrow">Fale conosco</p><h2 class="h2">Vamos encontrar o seu próximo imóvel?</h2><p style="color:var(--muted);margin-top:10px">Nossa equipe está pronta para entender o que você procura. Chame no WhatsApp ou envie uma mensagem.</p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px"><button class="btn btn-wa" data-wa="geral">${wa(18)} Falar no WhatsApp</button><button class="btn btn-out" data-go="contato">Enviar mensagem</button></div></div>
-   <div style="background:#f8fafc;border-radius:16px;padding:20px;display:grid;gap:14px;font-size:14px"><span style="display:flex;gap:10px">${ic('phone')}<span><b>Telefone</b><br><span style="color:var(--muted)">(11) 94726-8441</span></span></span><span style="display:flex;gap:10px">${ic('pin')}<span><b>Endereço</b><br><span style="color:var(--muted)">R. Independência, 155, Centro, Embu-Guaçu/SP, CEP 06900-140</span></span></span><span style="display:flex;gap:10px">${ic('clock')}<span><b>Horário</b><br><span style="color:var(--muted)">Seg. a sex., 8h às 18h · Sáb., 8h às 12h</span></span></span></div></div></div></section>`;
+   <div style="background:#f8f7f6;border-radius:16px;padding:20px;display:grid;gap:14px;font-size:14px"><span style="display:flex;gap:10px">${ic('phone')}<span><b>Telefone</b><br><span style="color:var(--muted)">(11) 94726-8441</span></span></span><span style="display:flex;gap:10px">${ic('pin')}<span><b>Endereço</b><br><span style="color:var(--muted)">R. Independência, 155, Centro, Embu-Guaçu/SP, CEP 06900-140</span></span></span><span style="display:flex;gap:10px">${ic('clock')}<span><b>Horário</b><br><span style="color:var(--muted)">Seg. a sex., 8h às 18h · Sáb., 8h às 12h</span></span></span></div></div></div></section>`;
 }
 
 function pageList(kind){
@@ -483,14 +483,14 @@ function pageList(kind){
   if(f.min)list=list.filter(p=>eff(p)>=f.min);
   const ord={disponivel:0,reservado:1,vendido:2,alugado:3,indisponivel:4};
   list=[...list].sort((a,b)=>ord[a.status]-ord[b.status]||(f.sort==='menor'?eff(a)-eff(b):f.sort==='maior'?eff(b)-eff(a):b.code.localeCompare(a.code)));
-  const cnt=(k,l)=>`<div class="fgroup"><span class="lb" style="display:block;font-size:13px;font-weight:600;color:#334155;margin-bottom:5px">${l}</span><div class="cnt">${[0,1,2,3,4].map(n=>`<button type="button" data-cnt="${k}" data-n="${n}" aria-pressed="${(f[k]||0)===n}">${n?n+'+':'Todos'}</button>`).join('')}</div></div>`;
+  const cnt=(k,l)=>`<div class="fgroup"><span class="lb" style="display:block;font-size:13px;font-weight:600;color:#44403c;margin-bottom:5px">${l}</span><div class="cnt">${[0,1,2,3,4].map(n=>`<button type="button" data-cnt="${k}" data-n="${n}" aria-pressed="${(f[k]||0)===n}">${n?n+'+':'Todos'}</button>`).join('')}</div></div>`;
   return `<section class="phero"><div class="wrap"><p class="crumb">Início › ${T[0]}</p><h1>${T[0]}</h1><p>${T[1]}</p></div></section>
   <div class="wrap listing"><aside class="card filters" aria-label="Filtros"><h3>${ic('sliders',16)} Busca avançada</h3>
-   ${kind==='imoveis'?`<div class="fgroup"><span style="display:block;font-size:13px;font-weight:600;color:#334155;margin-bottom:5px">Negociação</span><div class="cnt" style="grid-template-columns:repeat(3,1fr)">${[['','Todos'],['venda','Venda'],['aluguel','Aluguel']].map(([v,l])=>`<button type="button" data-fp="${v}" aria-pressed="${(f.purpose||'')===v}">${l}</button>`).join('')}</div></div>`:''}
+   ${kind==='imoveis'?`<div class="fgroup"><span style="display:block;font-size:13px;font-weight:600;color:#44403c;margin-bottom:5px">Negociação</span><div class="cnt" style="grid-template-columns:repeat(3,1fr)">${[['','Todos'],['venda','Venda'],['aluguel','Aluguel']].map(([v,l])=>`<button type="button" data-fp="${v}" aria-pressed="${(f.purpose||'')===v}">${l}</button>`).join('')}</div></div>`:''}
    <div class="fgroup"><label class="lb" for="f-q">Cidade, bairro ou código</label><input class="field" id="f-q" value="${esc(f.q||'')}" placeholder="Ex.: Centro, 0001"></div>
    <div class="fgroup"><label class="lb" for="f-cat">Tipo de imóvel</label><select class="field" id="f-cat"><option value="">Todos os tipos</option>${CATS.map(c=>`<option value="${c[0]}" ${f.cat===c[0]?'selected':''}>${c[1]}</option>`).join('')}</select></div>
    ${cnt('bed','Quartos')}${cnt('bath','Banheiros')}${cnt('park','Vagas')}
-   <div class="fgroup"><span style="display:block;font-size:13px;font-weight:600;color:#334155;margin-bottom:5px">Valor (R$)</span><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><input class="field" id="f-min" inputmode="numeric" placeholder="Mínimo" aria-label="Valor mínimo" value="${f.min||''}"><input class="field" id="f-max" inputmode="numeric" placeholder="Máximo" aria-label="Valor máximo" value="${f.max||''}"></div></div>
+   <div class="fgroup"><span style="display:block;font-size:13px;font-weight:600;color:#44403c;margin-bottom:5px">Valor (R$)</span><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><input class="field" id="f-min" inputmode="numeric" placeholder="Mínimo" aria-label="Valor mínimo" value="${f.min||''}"><input class="field" id="f-max" inputmode="numeric" placeholder="Máximo" aria-label="Valor máximo" value="${f.max||''}"></div></div>
    <div style="display:flex;gap:8px"><button class="btn btn-out" data-clear style="flex:1">Limpar</button><button class="btn btn-navy" data-apply style="flex:2">Aplicar filtros</button></div></aside>
    <div style="min-width:0"><div class="lhead"><b style="color:var(--navy-950)">${list.length} ${list.length===1?'imóvel encontrado':'imóveis encontrados'}</b>
     <select class="field" id="f-sort" style="width:auto" aria-label="Ordenar"><option value="">Mais recentes</option><option value="menor" ${f.sort==='menor'?'selected':''}>Menor preço</option><option value="maior" ${f.sort==='maior'?'selected':''}>Maior preço</option></select></div>
@@ -505,7 +505,7 @@ function pageProp(){
   return `<div class="wrap" style="padding-top:20px"><p class="crumb" style="color:var(--soft)">Início › ${p.purpose==='venda'?'Comprar':'Alugar'} › Cód. ${p.code} <span style="opacity:.7">· toninhoimoveis.com.br/imovel/${slug(p)}</span></p>
    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px"><span class="tag tag-navy">${p.purpose==='venda'?'À venda':'Para alugar'}</span><span class="tag" style="background:var(--navy-50);color:var(--navy-800)">${catName(p.cat)}</span>${o?'<span class="tag tag-rose">Oferta</span>':''}${p.featured?'<span class="tag tag-gold">Destaque</span>':''}${p.status!=='disponivel'?`<span class="tag tag-dark">${STL[p.status]}</span>`:''}</div>
    <h1 style="font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--navy-950);margin-top:10px">${esc(p.title)}</h1>
-   <p style="display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:14px;margin:6px 0 18px"><span style="display:flex;gap:5px;align-items:center;color:var(--muted)">${ic('pin',15)} ${esc(p.nb)}, ${esc(p.city)}/SP</span><span># Código do imóvel: <b style="color:#334155">${p.code}</b></span></p></div>
+   <p style="display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:14px;margin:6px 0 18px"><span style="display:flex;gap:5px;align-items:center;color:var(--muted)">${ic('pin',15)} ${esc(p.nb)}, ${esc(p.city)}/SP</span><span># Código do imóvel: <b style="color:#44403c">${p.code}</b></span></p></div>
   <div class="wrap pgrid"><div style="min-width:0;display:grid;gap:20px">
    <div><div class="gal">${photo(sc,p.v+i)}
      <button class="nav" style="left:12px" data-ph="-1" aria-label="Foto anterior">${ic('left')}</button><button class="nav" style="right:12px" data-ph="1" aria-label="Próxima foto">${ic('right')}</button>
@@ -514,12 +514,12 @@ function pageProp(){
     <div class="thumbs">${[0,1,2].map(k=>`<button data-thumb="${k}" aria-current="${k===i}" aria-label="Ver foto ${k+1}">${photo(sc,p.v+k)}</button>`).join('')}</div></div>
    ${closed?`<div class="note">Este imóvel já foi <b>${STL[p.status].toLowerCase()}</b>. Fale com a nossa equipe para conhecer opções semelhantes.</div>`:''}
    <div class="card box"><h2>Detalhes do imóvel</h2><div class="dgrid">${[['bed','Dormitórios',p.bed],['bath','Suítes',p.suite],['bath','Banheiros',p.bath],['car','Vagas',p.park],['building','Área construída',area(p.built)],['land','Área total',area(p.total)]].map(([a,b,c])=>`<div><span class="i">${ic(a)}</span><span><small>${b}</small><b class="num">${c}</b></span></div>`).join('')}</div></div>
-   <div class="card box"><h2>Descrição</h2><p style="color:#475569;line-height:1.7">Imóvel fictício de demonstração. ${esc(p.title)}, em ótima localização no bairro ${esc(p.nb)}, próximo a escolas, mercados e farmácias. Agende sua visita com a nossa equipe.</p></div>
+   <div class="card box"><h2>Descrição</h2><p style="color:#57534e;line-height:1.7">Imóvel fictício de demonstração. ${esc(p.title)}, em ótima localização no bairro ${esc(p.nb)}, próximo a escolas, mercados e farmácias. Agende sua visita com a nossa equipe.</p></div>
    ${p.feats.length?`<div class="card box"><h2>Características do imóvel</h2><ul class="feat">${p.feats.map(x=>`<li><span>${ic('check',13)}</span>${x}</li>`).join('')}</ul></div>`:''}
-   <div class="card box"><h2>Localização</h2><p style="display:flex;gap:6px;color:#475569">${ic('pin',16)} ${esc(p.nb)}, ${esc(p.city)}/SP</p><p style="font-size:12px;color:var(--soft);margin-top:6px">Por segurança, o endereço completo é informado no atendimento.</p></div></div>
+   <div class="card box"><h2>Localização</h2><p style="display:flex;gap:6px;color:#57534e">${ic('pin',16)} ${esc(p.nb)}, ${esc(p.city)}/SP</p><p style="font-size:12px;color:var(--soft);margin-top:6px">Por segurança, o endereço completo é informado no atendimento.</p></div></div>
   <aside class="side"><div class="card box"><p style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)">${p.purpose==='venda'?'Venda':'Aluguel'}</p>
     ${o?`<p class="old" style="font-size:14px;margin-top:4px">DE: <s>${price(p.price,p.purpose)}</s></p><p class="big promo num"><small style="font-size:15px">POR: </small>${price(p.promo,p.purpose)}</p><span class="save">Economia de ${brl(p.price-p.promo)}</span>`:`<p class="big num" style="margin-top:4px">${price(p.price,p.purpose)}</p>`}
-    ${p.condo||p.iptu?`<div style="border-top:1px solid #eef1f5;margin-top:14px;padding-top:12px;font-size:14px;display:grid;gap:6px">${p.condo?`<div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">Condomínio</span><b class="num">${brl(p.condo)}/mês</b></div>`:''}${p.iptu?`<div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">IPTU</span><b class="num">${brl(p.iptu)}/ano</b></div>`:''}</div>`:''}
+    ${p.condo||p.iptu?`<div style="border-top:1px solid #efedeb;margin-top:14px;padding-top:12px;font-size:14px;display:grid;gap:6px">${p.condo?`<div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">Condomínio</span><b class="num">${brl(p.condo)}/mês</b></div>`:''}${p.iptu?`<div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">IPTU</span><b class="num">${brl(p.iptu)}/ano</b></div>`:''}</div>`:''}
     <button class="btn btn-wa" data-wa="${p.code}" style="width:100%;margin-top:16px;padding:14px;font-size:15px">${wa(18)} Tenho interesse neste imóvel</button></div>
    <form class="card box" id="lead-form" novalidate><h2 style="margin-bottom:4px">Quero mais informações</h2><p style="color:var(--muted);font-size:13px;margin-bottom:14px">Preencha e retornaremos rapidamente.</p>
     <div style="display:grid;gap:10px"><div><label class="lb" for="l-name">Nome *</label><input class="field" id="l-name" required></div>
@@ -532,7 +532,7 @@ function pageProp(){
 }
 
 function pageSimple(k){
-  if(k==='sobre')return `<section class="phero"><div class="wrap"><p class="crumb">Início › Sobre nós</p><h1>Sobre a Toninho Imóveis</h1><p>Confiança, profissionalismo e atendimento próximo em cada negociação.</p></div></section><div class="wrap two" style="padding-block:44px;align-items:start"><div class="card box" style="padding:32px"><h2 class="h2">Nossa história</h2><p style="color:#475569;margin-top:14px;line-height:1.75">A Toninho Imóveis nasceu para tornar a compra, a venda e a locação de imóveis uma experiência simples, transparente e segura.</p><p style="color:#475569;margin-top:12px;line-height:1.75">Com atendimento próximo e conhecimento da região, acompanhamos cada cliente do primeiro contato até a entrega das chaves, cuidando de toda a documentação com responsabilidade.</p><p style="font-size:12px;color:var(--soft);margin-top:16px">Este texto é editável pelo painel, em Configurações.</p></div><div class="vals">${[['shield','Segurança jurídica','Documentação analisada em todas as etapas.'],['hand','Transparência','Informações claras para decidir com tranquilidade.'],['check','Experiência','Conhecimento do mercado da região.'],['key','Até as chaves','Acompanhamento até o fim do negócio.']].map(([i,t,d])=>`<div style="background:#fff">${ic(i)}<b>${t}</b><small>${d}</small></div>`).join('')}</div></div>`;
+  if(k==='sobre')return `<section class="phero"><div class="wrap"><p class="crumb">Início › Sobre nós</p><h1>Sobre a Toninho Imóveis</h1><p>Confiança, profissionalismo e atendimento próximo em cada negociação.</p></div></section><div class="wrap two" style="padding-block:44px;align-items:start"><div class="card box" style="padding:32px"><h2 class="h2">Nossa história</h2><p style="color:#57534e;margin-top:14px;line-height:1.75">A Toninho Imóveis nasceu para tornar a compra, a venda e a locação de imóveis uma experiência simples, transparente e segura.</p><p style="color:#57534e;margin-top:12px;line-height:1.75">Com atendimento próximo e conhecimento da região, acompanhamos cada cliente do primeiro contato até a entrega das chaves, cuidando de toda a documentação com responsabilidade.</p><p style="font-size:12px;color:var(--soft);margin-top:16px">Este texto é editável pelo painel, em Configurações.</p></div><div class="vals">${[['shield','Segurança jurídica','Documentação analisada em todas as etapas.'],['hand','Transparência','Informações claras para decidir com tranquilidade.'],['check','Experiência','Conhecimento do mercado da região.'],['key','Até as chaves','Acompanhamento até o fim do negócio.']].map(([i,t,d])=>`<div style="background:#fff">${ic(i)}<b>${t}</b><small>${d}</small></div>`).join('')}</div></div>`;
   if(k==='contato')return `<section class="phero"><div class="wrap"><p class="crumb">Início › Contato</p><h1>Contato</h1><p>Estamos prontos para ajudar você a comprar, vender ou alugar.</p></div></section><div class="wrap two" style="padding-block:44px;align-items:start"><div style="display:grid;gap:14px"><button class="btn btn-wa" data-wa="geral" style="justify-content:flex-start;padding:22px;border-radius:18px;font-size:17px">${wa(34)} Falar no WhatsApp</button><div class="card box" style="display:grid;gap:14px;font-size:14px"><span style="display:flex;gap:10px">${ic('phone')} (11) 94726-8441</span><span style="display:flex;gap:10px">${ic('mail')} imoveistoninho@hotmail.com</span><span style="display:flex;gap:10px">${ic('pin')} R. Independência, 155, Centro, Embu-Guaçu/SP, CEP 06900-140</span><span style="display:flex;gap:10px">${ic('clock')} Seg. a sex., 8h às 18h · Sáb., 8h às 12h</span></div></div><form class="card box" id="contact-form" style="padding:28px;display:grid;gap:12px"><h2>Envie uma mensagem</h2><div><label class="lb" for="c-name">Nome *</label><input class="field" id="c-name"></div><div><label class="lb" for="c-phone">Telefone *</label><input class="field" id="c-phone" type="tel"></div><div><label class="lb" for="c-msg">Mensagem</label><textarea class="field" id="c-msg" rows="4"></textarea></div><p id="c-err" style="color:var(--rose);font-size:12.5px;font-weight:600" hidden></p><button class="btn btn-navy" style="padding:13px">${ic('send',16)} Enviar mensagem</button></form></div>`;
   return `<section class="phero"><div class="wrap"><p class="crumb">Início › Anuncie seu imóvel</p><h1>Anuncie seu imóvel</h1><p>Envie os dados do seu imóvel e nossa equipe fará uma avaliação sem compromisso.</p></div></section><div class="wrap" style="padding-block:44px;max-width:820px"><form class="card box" id="req-form" style="padding:28px;display:grid;gap:12px;grid-template-columns:1fr 1fr"><h2 style="grid-column:1/-1">Dados do imóvel</h2><div style="grid-column:1/-1"><label class="lb" for="r-name">Nome *</label><input class="field" id="r-name"></div><div><label class="lb" for="r-phone">Telefone / WhatsApp *</label><input class="field" id="r-phone" type="tel"></div><div><label class="lb" for="r-type">Tipo de imóvel</label><select class="field" id="r-type">${CATS.map(c=>`<option>${c[1]}</option>`).join('')}</select></div><div><label class="lb" for="r-purpose">Venda ou aluguel</label><select class="field" id="r-purpose"><option value="venda">Venda</option><option value="aluguel">Aluguel</option></select></div><div><label class="lb" for="r-city">Cidade</label><input class="field" id="r-city" value="Embu-Guaçu"></div><div style="grid-column:1/-1"><label class="lb" for="r-value">Valor aproximado (R$)</label><input class="field" id="r-value" inputmode="numeric" placeholder="Ex.: 350000"></div><div style="grid-column:1/-1"><label class="lb" for="r-desc">Descrição</label><textarea class="field" id="r-desc" rows="4" placeholder="Quartos, área, diferenciais..."></textarea></div><p id="r-err" style="color:var(--rose);font-size:12.5px;font-weight:600;grid-column:1/-1" hidden></p><button class="btn btn-navy" style="grid-column:1/-1;padding:13px">${ic('send',16)} Enviar para avaliação</button></form></div>`;
 }
@@ -542,21 +542,21 @@ const AN=[['dash','Dashboard','grid'],['imoveis','Gerenciar imóveis','home'],['
 function adminShell(inner){
   const nl=DB.leads.filter(l=>l.status==='novo').length,nr=DB.requests.filter(r=>r.status==='novo').length;
   return `<div class="adm"><aside class="aside">${logo(true)}${AN.map(([k,l,i])=>`<button class="it" data-adm="${k}" ${S.admin===k?'aria-current="page"':''}>${ic(i)}${l}${k==='leads'&&nl?`<span class="badge">${nl}</span>`:''}${k==='reqs'&&nr?`<span class="badge">${nr}</span>`:''}</button>`).join('')}<button class="it" data-mode="site">${ic('ext')}Ver site</button>
-   <div class="who"><b style="color:#fff">Toninho</b><br><span style="color:#94a3b8">imoveistoninho@hotmail.com</span><br><button data-adm="login" style="border:0;background:none;color:#cbd5e1;padding:10px 0 0;display:flex;gap:8px;font-weight:700">${ic('logout',16)} Sair</button></div></aside>
+   <div class="who"><b style="color:#fff">Toninho</b><br><span style="color:#a8a29e">imoveistoninho@hotmail.com</span><br><button data-adm="login" style="border:0;background:none;color:#d6d3d1;padding:10px 0 0;display:flex;gap:8px;font-weight:700">${ic('logout',16)} Sair</button></div></aside>
    <main class="amain">${inner}</main></div>`;
 }
 function admLogin(){
-  return `<div class="login"><div class="art hero">${logo(true)}<div><h1 style="font-size:38px;font-weight:800">Painel administrativo</h1><p style="color:#cbd5e1;margin-top:10px;max-width:420px">Cadastre imóveis, gerencie fotos, ofertas e destaques, e acompanhe todos os contatos recebidos pelo site.</p></div><p style="font-size:12px;color:#94a3b8">Acesso restrito a administradores.</p></div>
+  return `<div class="login"><div class="art hero">${logo(true)}<div><h1 style="font-size:38px;font-weight:800">Painel administrativo</h1><p style="color:#d6d3d1;margin-top:10px;max-width:420px">Cadastre imóveis, gerencie fotos, ofertas e destaques, e acompanhe todos os contatos recebidos pelo site.</p></div><p style="font-size:12px;color:#a8a29e">Acesso restrito a administradores.</p></div>
    <div style="display:flex;align-items:center;justify-content:center;padding:24px"><form id="login-form" style="width:100%;max-width:360px;display:grid;gap:14px"><h2 style="font-size:24px;font-weight:800;color:var(--navy-950)">Entrar no painel</h2><p class="note">Demonstração: clique em <b>Entrar</b>, os dados já estão preenchidos.</p><div><label class="lb" for="lg-e">E-mail</label><input class="field" id="lg-e" value="imoveistoninho@hotmail.com"></div><div><label class="lb" for="lg-p">Senha</label><input class="field" id="lg-p" type="password" value="demonstracao"></div><button class="btn btn-navy" style="padding:13px">Entrar</button></form></div></div>`;
 }
 function admDash(){
   const P=DB.props,c=f=>P.filter(f).length;
-  const st=[['Total de imóveis',P.length,'home','#112e55','#fff'],['Imóveis à venda',c(p=>p.purpose==='venda'),'tag','#e0f2fe','#0369a1'],['Para aluguel',c(p=>p.purpose==='aluguel'),'key','#ede9fe','#6d28d9'],['Disponíveis',c(p=>p.status==='disponivel'),'check','#d1fae5','#047857'],['Vendidos',c(p=>p.status==='vendido'),'hand','#e2e8f0','#334155'],['Alugados',c(p=>p.status==='alugado'),'key','#e2e8f0','#334155'],['Em destaque',c(p=>p.featured),'star','#f9ecc9','#864f17'],['Em oferta',c(p=>p.offer),'tag','#ffe4e6','#be123c'],['Contatos recebidos',DB.leads.length,'inbox','#fef3c7','#b45309']];
+  const st=[['Total de imóveis',P.length,'home','#1c1917','#f97316'],['Imóveis à venda',c(p=>p.purpose==='venda'),'tag','#e0f2fe','#0369a1'],['Para aluguel',c(p=>p.purpose==='aluguel'),'key','#ede9fe','#6d28d9'],['Disponíveis',c(p=>p.status==='disponivel'),'check','#d1fae5','#047857'],['Vendidos',c(p=>p.status==='vendido'),'hand','#e7e5e4','#44403c'],['Alugados',c(p=>p.status==='alugado'),'key','#e7e5e4','#44403c'],['Em destaque',c(p=>p.featured),'star','#ffedd5','#9a3412'],['Em oferta',c(p=>p.offer),'tag','#ffe4e6','#be123c'],['Contatos recebidos',DB.leads.length,'inbox','#fef3c7','#b45309']];
   return adminShell(`<div class="ahead"><div><h1>Dashboard</h1><p>Visão geral da Toninho Imóveis.</p></div><button class="btn btn-gold" data-adm="novo">${ic('plus',16)} Cadastrar imóvel</button></div>
    <div class="stats">${st.map(([l,v,i,b,f])=>`<div class="card"><span class="ic2" style="background:${b};color:${f}">${ic(i)}</span><b class="num">${v}</b><small>${l}</small></div>`).join('')}</div>
    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:24px">
-    <div class="card" style="overflow:hidden"><div style="display:flex;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line)"><b>Últimos imóveis cadastrados</b><button class="link" data-adm="imoveis">Ver todos ${ic('arrow',14)}</button></div>${P.slice().reverse().slice(0,5).map(p=>`<div style="display:flex;gap:12px;align-items:center;padding:10px 18px;border-bottom:1px solid #f1f4f8"><span class="thumb">${photo(sceneOf(p.cat),p.v)}</span><span style="flex:1;min-width:0"><b style="display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><span style="color:var(--soft)">#${p.code}</span> ${esc(p.title)}</b><small style="color:var(--muted)">${p.purpose==='venda'?'Venda':'Aluguel'} · ${price(eff(p),p.purpose)}</small></span><span class="pill st-${p.status}">${STL[p.status]}</span></div>`).join('')}</div>
-    <div class="card" style="overflow:hidden"><div style="display:flex;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line)"><b>Últimos contatos</b><button class="link" data-adm="leads">Ver todos ${ic('arrow',14)}</button></div>${DB.leads.slice(0,5).map(l=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:11px 18px;border-bottom:1px solid #f1f4f8"><span><b style="font-size:14px">${esc(l.name)}</b><br><small style="color:var(--muted)">${l.code?'Imóvel #'+l.code:'Contato geral'} · ${l.date}</small></span><span class="pill ld-${l.status}" style="align-self:center">${LST[l.status]}</span></div>`).join('')}</div></div>`);
+    <div class="card" style="overflow:hidden"><div style="display:flex;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line)"><b>Últimos imóveis cadastrados</b><button class="link" data-adm="imoveis">Ver todos ${ic('arrow',14)}</button></div>${P.slice().reverse().slice(0,5).map(p=>`<div style="display:flex;gap:12px;align-items:center;padding:10px 18px;border-bottom:1px solid #f2f0ee"><span class="thumb">${photo(sceneOf(p.cat),p.v)}</span><span style="flex:1;min-width:0"><b style="display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><span style="color:var(--soft)">#${p.code}</span> ${esc(p.title)}</b><small style="color:var(--muted)">${p.purpose==='venda'?'Venda':'Aluguel'} · ${price(eff(p),p.purpose)}</small></span><span class="pill st-${p.status}">${STL[p.status]}</span></div>`).join('')}</div>
+    <div class="card" style="overflow:hidden"><div style="display:flex;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line)"><b>Últimos contatos</b><button class="link" data-adm="leads">Ver todos ${ic('arrow',14)}</button></div>${DB.leads.slice(0,5).map(l=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:11px 18px;border-bottom:1px solid #f2f0ee"><span><b style="font-size:14px">${esc(l.name)}</b><br><small style="color:var(--muted)">${l.code?'Imóvel #'+l.code:'Contato geral'} · ${l.date}</small></span><span class="pill ld-${l.status}" style="align-self:center">${LST[l.status]}</span></div>`).join('')}</div></div>`);
 }
 function admProps(){
   const q=norm(S.adminQ);const list=DB.props.filter(p=>!q||norm(`${p.code} ${p.title} ${p.nb} ${p.city}`).includes(q));
@@ -576,21 +576,21 @@ function admNovo(){
    <div><label class="lb" for="n-nb">Bairro</label><input class="field" id="n-nb" value="Jardim Primavera"></div>
    <div><label class="lb" for="n-bed">Dormitórios</label><input class="field" id="n-bed" type="number" value="3"></div>
    <div><label class="lb" for="n-area">Área total (m²)</label><input class="field" id="n-area" type="number" value="250"></div></div></div>
-   <div class="card box"><h2>Fotos</h2><div style="border:2px dashed #cfd6e0;border-radius:16px;padding:22px;text-align:center;color:var(--muted)">${ic('plus',22)}<p style="font-weight:700;color:var(--navy-900);margin-top:6px">Enviar várias fotos de uma vez</p><p style="font-size:13px">No sistema real as fotos vão para o Supabase Storage, com escolha da foto principal e ordem.</p></div></div>
-   <div class="card box"><h2>Publicação</h2><label style="display:flex;gap:10px;align-items:center;font-weight:600"><input type="checkbox" id="n-feat" checked style="width:18px;height:18px;accent-color:#173c6d"> Imóvel em destaque (aparece na página inicial)</label></div>
+   <div class="card box"><h2>Fotos</h2><div style="border:2px dashed #d6d3d1;border-radius:16px;padding:22px;text-align:center;color:var(--muted)">${ic('plus',22)}<p style="font-weight:700;color:var(--navy-900);margin-top:6px">Enviar várias fotos de uma vez</p><p style="font-size:13px">No sistema real as fotos vão para o Supabase Storage, com escolha da foto principal e ordem.</p></div></div>
+   <div class="card box"><h2>Publicação</h2><label style="display:flex;gap:10px;align-items:center;font-weight:600"><input type="checkbox" id="n-feat" checked style="width:18px;height:18px;accent-color:#ea580c"> Imóvel em destaque (aparece na página inicial)</label></div>
    <div><button class="btn btn-navy" style="padding:13px 22px">${ic('check',16)} Cadastrar imóvel</button></div></form>`);
 }
 function admLeads(){
   return adminShell(`<div class="ahead"><div><h1>Interessados</h1><p>Contatos enviados pelos formulários do site, vinculados ao imóvel.</p></div></div>
    <div style="display:grid;gap:12px">${DB.leads.map(l=>`<div class="card lead"><div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px"><div><b style="color:var(--navy-950)">${esc(l.name)}</b> <span class="pill ld-${l.status}">${LST[l.status]}</span><p style="color:var(--muted);font-size:13px;margin-top:3px">${l.code?`Imóvel #${l.code}`:'Contato geral'} · ${esc(l.phone)} · ${l.date}</p></div>
     <label style="display:flex;gap:8px;align-items:center;font-size:13px;font-weight:600">Status <select class="field" data-lead="${l.id}" style="width:auto">${Object.entries(LST).map(([k,v])=>`<option value="${k}" ${l.status===k?'selected':''}>${v}</option>`).join('')}</select></label></div>
-    <p style="background:#f8fafc;border-radius:10px;padding:10px 12px;margin-top:10px;font-size:14px;color:#334155">${esc(l.msg||'(sem mensagem)')}</p></div>`).join('')}</div>`);
+    <p style="background:#f8f7f6;border-radius:10px;padding:10px 12px;margin-top:10px;font-size:14px;color:#44403c">${esc(l.msg||'(sem mensagem)')}</p></div>`).join('')}</div>`);
 }
 function admReqs(){
   return adminShell(`<div class="ahead"><div><h1>Solicitações de anúncio</h1><p>Proprietários que preencheram o formulário Anuncie seu imóvel no site.</p></div></div>
    <div style="display:grid;gap:12px">${DB.requests.map(r=>`<div class="card lead"><div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px"><div><b style="color:var(--navy-950)">${esc(r.name)}</b> <span class="pill ld-${r.status}">${LST[r.status]}</span><p style="color:var(--muted);font-size:13px;margin-top:3px">${esc(r.type)} para ${r.purpose} · ${esc(r.city)} · ${r.value?brl(r.value):'valor não informado'} · ${r.date}</p></div>
     <label style="display:flex;gap:8px;align-items:center;font-size:13px;font-weight:600">Status <select class="field" data-req="${r.id}" style="width:auto">${Object.entries(LST).map(([k,v])=>`<option value="${k}" ${r.status===k?'selected':''}>${v}</option>`).join('')}</select></label></div>
-    <p style="background:#f8fafc;border-radius:10px;padding:10px 12px;margin-top:10px;font-size:14px;color:#334155">${esc(r.desc||'(sem descrição)')}</p></div>`).join('')}</div>`);
+    <p style="background:#f8f7f6;border-radius:10px;padding:10px 12px;margin-top:10px;font-size:14px;color:#44403c">${esc(r.desc||'(sem descrição)')}</p></div>`).join('')}</div>`);
 }
 function admConfig(){
   return adminShell(`<div class="ahead"><div><h1>Configurações da imobiliária</h1><p>Estas informações aparecem automaticamente no site.</p></div></div>
