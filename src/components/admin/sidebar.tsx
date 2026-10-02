@@ -26,7 +26,7 @@ const NAV = [
   { href: "/admin/imoveis", label: "Gerenciar imóveis", icon: Home },
   { href: "/admin/imoveis/novo", label: "Cadastrar imóvel", icon: Plus, exact: true },
   { href: "/admin/interessados", label: "Interessados", icon: Inbox, badge: "leads" as const },
-  { href: "/admin/solicitacoes", label: "Anuncie seu imóvel", icon: Megaphone, badge: "requests" as const },
+  { href: "/admin/solicitacoes", label: "Solicitações de anúncio", icon: Megaphone, badge: "requests" as const },
   { href: "/admin/caracteristicas", label: "Características e categorias", icon: ListChecks },
   { href: "/admin/configuracoes", label: "Configurações", icon: Settings },
   { href: "/admin/usuarios", label: "Usuários", icon: Users },

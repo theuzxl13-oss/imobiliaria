@@ -32,7 +32,7 @@ update public.site_settings set
   company_name   = 'Toninho Imóveis',
   phone          = '(11) 94726-8441',
   whatsapp       = '5511947268441',
-  email          = 'contato@toninhoimoveis.com.br',
+  email          = 'imoveistoninho@hotmail.com',
   address        = 'R. Independência, 155 — Centro, Embu-Guaçu/SP — CEP 06900-140',
   instagram      = '',
   facebook       = '',

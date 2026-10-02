@@ -34,8 +34,8 @@ export default async function SolicitacoesPage({ searchParams }: PageProps<"/adm
   return (
     <>
       <PageHeader
-        title="Anuncie seu imóvel"
-        description="Proprietários que enviaram imóveis para avaliação pelo site."
+        title="Solicitações de anúncio"
+        description="Proprietários que preencheram o formulário Anuncie seu imóvel no site."
       />
       <Suspense>
         <SearchToolbar
