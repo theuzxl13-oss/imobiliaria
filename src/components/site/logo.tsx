@@ -4,11 +4,11 @@ import { cn } from "@/lib/cn";
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden className={cn("h-10 w-10 shrink-0", className)}>
-      <rect width="64" height="64" rx="14" fill="#0b2140" />
+      <rect width="64" height="64" rx="14" fill="#0a0908" />
       <path
         d="M12 31 32 14l20 17"
         fill="none"
-        stroke="#dfa935"
+        stroke="#f97316"
         strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"

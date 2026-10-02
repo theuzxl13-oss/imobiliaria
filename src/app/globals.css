@@ -2,37 +2,37 @@
 
 /* =====================================================================
    Identidade visual — Toninho Imóveis
-   Azul-marinho (confiança/segurança) + dourado (valor/premium)
+   Preto (solidez/confiança) + laranja (energia/destaque)
    ===================================================================== */
 @theme {
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand-50: #eef4fb;
-  --color-brand-100: #d7e4f4;
-  --color-brand-200: #b0c9e8;
-  --color-brand-300: #7fa6d6;
-  --color-brand-400: #4f7fbf;
-  --color-brand-500: #2f62a5;
-  --color-brand-600: #1f4c88;
-  --color-brand-700: #173c6d;
-  --color-brand-800: #112e55;
-  --color-brand-900: #0b2140;
-  --color-brand-950: #07152b;
+  --color-brand-50: #f6f5f4;
+  --color-brand-100: #e7e5e4;
+  --color-brand-200: #d6d3d1;
+  --color-brand-300: #a8a29e;
+  --color-brand-400: #78716c;
+  --color-brand-500: #57534e;
+  --color-brand-600: #44403c;
+  --color-brand-700: #292524;
+  --color-brand-800: #1c1917;
+  --color-brand-900: #141210;
+  --color-brand-950: #0a0908;
 
-  --color-gold-50: #fdf8ec;
-  --color-gold-100: #f9ecc9;
-  --color-gold-200: #f2d78f;
-  --color-gold-300: #e9bf57;
-  --color-gold-400: #dfa935;
-  --color-gold-500: #c98d1f;
-  --color-gold-600: #a96d18;
-  --color-gold-700: #864f17;
+  --color-gold-50: #fff7ed;
+  --color-gold-100: #ffedd5;
+  --color-gold-200: #fed7aa;
+  --color-gold-300: #fdba74;
+  --color-gold-400: #f97316;
+  --color-gold-500: #ea580c;
+  --color-gold-600: #c2410c;
+  --color-gold-700: #9a3412;
 
   --color-whatsapp: #25d366;
   --color-whatsapp-dark: #1da851;
 
-  --shadow-card: 0 1px 2px rgb(11 33 64 / 0.04), 0 8px 24px -8px rgb(11 33 64 / 0.12);
-  --shadow-card-hover: 0 2px 4px rgb(11 33 64 / 0.06), 0 20px 40px -12px rgb(11 33 64 / 0.25);
+  --shadow-card: 0 1px 2px rgb(10 9 8 / 0.04), 0 8px 24px -8px rgb(10 9 8 / 0.12);
+  --shadow-card-hover: 0 2px 4px rgb(10 9 8 / 0.06), 0 20px 40px -12px rgb(10 9 8 / 0.25);
 
   --animate-shimmer: shimmer 1.6s infinite;
   @keyframes shimmer {
@@ -48,8 +48,8 @@ html {
 }
 
 body {
-  background: #f7f8fb;
-  color: #0f1b2d;
+  background: #f7f6f5;
+  color: #171412;
 }
 
 ::selection {
@@ -133,8 +133,8 @@ body {
 
 .hero-pattern {
   background-image:
-    radial-gradient(circle at 20% 20%, rgb(223 169 53 / 0.18), transparent 40%),
-    radial-gradient(circle at 80% 0%, rgb(79 127 191 / 0.35), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgb(249 115 22 / 0.22), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgb(249 115 22 / 0.10), transparent 45%),
     linear-gradient(135deg, var(--color-brand-950) 0%, var(--color-brand-800) 55%, var(--color-brand-700) 100%);
 }
 
