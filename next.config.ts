@@ -8,6 +8,8 @@ const isLocalSupabase =
   supabaseUrl?.hostname === "127.0.0.1" || supabaseUrl?.hostname === "localhost";
 
 const nextConfig: NextConfig = {
+  // O indicador de desenvolvimento ficava sobre o botão "Sair" do painel.
+  devIndicators: false,
   images: {
     remotePatterns: [
       // Fotos enviadas pelo painel (Supabase Storage)
