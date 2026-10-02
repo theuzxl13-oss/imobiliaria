@@ -5,8 +5,23 @@ Plataforma imobiliária completa da **Toninho Imóveis**: site público para anu
 Tudo fica salvo em banco de dados real (Supabase/PostgreSQL). Nenhuma informação importante depende do navegador.
 
 > 🎬 **Demonstração para apresentação:** https://theuzxl13-oss.github.io/imobiliaria/
-> Versão visual e clicável do site e do painel, com imóveis fictícios e sem banco de dados (nada é salvo).
+> Versão visual e clicável do site e do painel, com imóveis fictícios e sem banco de dados (as alterações ficam salvas só no navegador de quem está usando; o botão "Restaurar demo" volta ao padrão).
 > O arquivo fica em `docs/index.html`; a cópia publicada pelo GitHub Pages fica na branch `gh-pages` (para atualizar, copie o arquivo para lá).
+
+### 🤖 Assistente virtual (chatbot) da demonstração
+
+O botão **"Fale com o Toni"** abre um chat que faz o primeiro atendimento do cliente: entende o que ele procura, indica imóveis do catálogo (como cartões clicáveis), tira dúvidas, anota nome e telefone (vira um registro em **Interessados**) e passa para o corretor no WhatsApp já com o resumo da conversa.
+
+No painel, em **Assistente virtual**, você configura o nome, a mensagem de boas-vindas, as instruções de atendimento, as informações da imobiliária, as perguntas frequentes e as sugestões rápidas. Em **Conversas do chat** ficam todas as conversas.
+
+- **Sem chave de IA:** funciona no *modo básico* (perguntas frequentes, contatos e busca de imóveis por palavras-chave).
+- **Com o Gemini (gratuito):** crie uma chave em <https://aistudio.google.com/apikey>, cole em **Assistente virtual → Conexão com o Gemini** e clique em *Testar conexão*. Nesta demonstração a chave fica salva **apenas no navegador** de quem a colou (ótimo para apresentar).
+- **Para todos os visitantes usarem a IA sem expor a chave:** publique o proxy `chatbot-proxy/worker.mjs` no Cloudflare Workers (plano gratuito):
+  1. Em <https://dash.cloudflare.com> → **Workers & Pages → Create → Worker**, cole o conteúdo de `chatbot-proxy/worker.mjs` e clique em **Deploy**.
+  2. Em **Settings → Variables and Secrets**, adicione o secret `GEMINI_API_KEY` com a sua chave (e, se o site mudar de endereço, `ALLOWED_ORIGINS`).
+  3. Coloque a URL do Worker (ex.: `https://toninho-chat.SEU-USUARIO.workers.dev`) na constante `GEMINI_PROXY_URL` no início do script de `docs/index.html` e publique novamente.
+
+> ⚠️ Nunca coloque a chave do Gemini diretamente no código do site: qualquer pessoa conseguiria copiá-la.
 
 ---
 
