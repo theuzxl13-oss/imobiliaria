@@ -277,7 +277,7 @@ export default async function PropertyPage({ params }: PageProps<"/imovel/[slug]
           </div>
 
           {/* Coluna lateral */}
-          <aside className="space-y-5 lg:sticky lg:top-24 lg:self-start">
+          <aside className="space-y-5 lg:self-start">
             <div className="card p-5 sm:p-6">
               <p className="text-xs font-semibold tracking-wide text-slate-500 uppercase">
                 {PURPOSE_LABEL[property.purpose]}
