@@ -6,7 +6,7 @@ Tudo fica salvo em banco de dados real (Supabase/PostgreSQL). Nenhuma informaç�
 
 > 🎬 **Demonstração para apresentação:** https://theuzxl13-oss.github.io/imobiliaria/
 > Versão visual e clicável do site e do painel, com imóveis fictícios e sem banco de dados (nada é salvo).
-> O arquivo fica em `docs/index.html` e é publicado pelo GitHub Pages.
+> O arquivo fica em `docs/index.html`; a cópia publicada pelo GitHub Pages fica na branch `gh-pages` (para atualizar, copie o arquivo para lá).
 
 ---
 
