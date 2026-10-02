@@ -8,7 +8,10 @@
  * Se o e-mail já existir no Supabase Auth, o usuário apenas recebe acesso de administrador
  * (a senha informada é ignorada nesse caso).
  */
+import { existsSync } from "node:fs";
 import { createClient } from "@supabase/supabase-js";
+
+if (existsSync(".env.local")) process.loadEnvFile(".env.local");
 
 const [email, password, name = "Administrador"] = process.argv.slice(2);
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
