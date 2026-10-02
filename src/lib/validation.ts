@@ -29,8 +29,16 @@ export function parseMoney(value: unknown): number | null {
   if (value === null || value === undefined) return null;
   const raw = String(value).trim();
   if (!raw) return null;
-  const normalized = raw.includes(",") ? raw.replace(/\./g, "").replace(",", ".") : raw;
-  const n = Number(normalized.replace(/[^\d.-]/g, ""));
+  const cleaned = raw.replace(/[^\d.,-]/g, "");
+  let normalized = cleaned;
+  if (cleaned.includes(",")) {
+    // Formato brasileiro: 1.234.567,89
+    normalized = cleaned.replace(/\./g, "").replace(",", ".");
+  } else if (/^\d{1,3}(\.\d{3})+$/.test(cleaned)) {
+    // Apenas separador de milhar: 650.000
+    normalized = cleaned.replace(/\./g, "");
+  }
+  const n = Number(normalized);
   return Number.isFinite(n) ? n : NaN;
 }
 

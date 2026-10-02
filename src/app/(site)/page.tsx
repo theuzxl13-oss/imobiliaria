@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -13,6 +12,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { HeroSearch } from "@/components/site/hero-search";
+import { SafeImage } from "@/components/site/safe-image";
 import { PropertyGrid } from "@/components/site/property-card";
 import { SectionHeader } from "@/components/site/section-header";
 import { CategoryIcon } from "@/components/site/category-icon";
@@ -64,7 +64,8 @@ export default async function HomePage() {
 
       {/* BANNER + BUSCA */}
       <section className="hero-pattern relative isolate overflow-hidden text-white">
-        <Image
+        <SafeImage
+          hideOnError
           src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80"
           alt=""
           fill
